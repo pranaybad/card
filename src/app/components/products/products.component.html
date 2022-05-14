@@ -1,0 +1,45 @@
+<div class="cart-top container-fuild">
+    <div class="container d-flex">
+        <div class="items">
+            <a>
+                <img src="https://static.vecteezy.com/system/resources/previews/001/198/620/original/gift-png.png">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://www.pngmart.com/files/7/Desktop-Computer-PNG-File.png">
+                <h6>Electroin</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://www.pngmart.com/files/11/Shopping-PNG-Background-Image.png">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://freepngimg.com/thumb/categories/600.png">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor='let item of productsList'>
+
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 class="itemsdata">{{item.title}}</h5>
+                <p class="itemsdata">{{item.description}}</p>
+                <p><strong>Price:</strong>₹{{item.price}}</p>
+                <p>{{item.category}}</p>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
